@@ -1,0 +1,14 @@
+<h1>The recent 20 Tweets are</h1>
+{% if tweet_list %}
+    <ul>
+    {% for tweet in tweet_list %}
+        <li>{{ tweet.tweet }}</a></li>
+    {% endfor %}
+    </ul>
+	<h1>The most common user is</h1><br>
+	{{common}}
+	<h1>The most common hashtag is</h1><br>
+	{{hash_tags}}
+{% else %}
+    <p>No Tweets Available</p>
+{% endif %}
